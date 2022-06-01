@@ -1,0 +1,252 @@
+/*img de fondo*/
+.imgFondo{
+    background-image: url(./img/imgfondo2.jpg);
+    background-size: cover;
+
+}
+
+/** {
+    margin: 1;
+    padding: 1;
+    box-sizing: border-box;
+
+}*/
+
+html{
+    min-height: 100%;
+}
+.container{
+    display: grid;
+   /* grid-template-columns: repeat(4, 1fr);*/
+    /*grid-template-rows: repeat(4,1fr);*/
+    grid-template-columns: 25% 25% auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "logo h1  nav nav"
+    " hero1 hero1 hero2 hero2" 
+    " card1 card1 card2 card2"
+    " footer footer footer footer"
+    ;    
+    max-width: 1440px;
+    margin: 0 auto;
+    /*row-gap: 20px;
+    column-gap: 20px;*/
+
+}
+li a:hover{
+    color:black;
+}
+h2:hover{
+    color: blue; 
+
+}
+@media (min-width: 480px){
+    .container{
+    grid-template-areas: 
+    "logo h1  nav nav" 25% 25% auto auto
+    "hero1 hero1 hero2 hero2" 
+    "card1 card1 card2 card2"
+    "footer footer footer footer";
+    }
+}
+@media (min-width: 768px){
+    .container{
+    grid-template-areas: 
+    "logo h1  nav nav"
+    "hero1 hero1 hero2 hero2" 
+    "card1 card1 card2 card2"
+    "footer footer footer footer";
+    }
+}
+
+@media (min-width: 900px){
+    .container{
+    grid-template-areas: 
+    "logo h1  nav nav"
+    "hero1 hero1 hero2 hero2" 
+    "card1 card1 card2 card2"
+    "footer footer footer footer";
+    }
+}
+
+#tInicio{
+    text-align:center;
+    font-style: italic;
+
+}
+.tConcolor{
+    color: black;
+    font-style: italic;
+    font-size: large;
+    font-weight: bold;
+    line-height: 1;
+}
+.colorTexto{
+    color: rgb(22, 22, 201);
+    font-size:larger;
+}
+
+h1{
+    grid-area: h1;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 1 rem;
+}
+
+.logo{
+    grid-area: logo;
+    width: auto;
+    height: auto;
+    justify-self: center;
+}
+nav{
+    grid-area: nav;
+}
+.headerNav{
+    /*grid-area: headerNav;*/
+    display: flex;
+    list-style-type: none;  
+    text-decoration: none;
+}
+.headerNav li{
+    /*display: inline-block;*/
+    list-style-type: none;
+    margin-left: 3.5rem;
+
+}
+.hero1{
+    grid-area: hero1;
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem; 
+    margin-bottom: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    width: 85%;
+    height: 85%;
+    padding: 0.5rem;
+    background: radial-gradient( gray, rgb(176, 176, 214));
+    border: 2px white solid;
+    transform: skewY(1deg);
+    transition: height 2s, width 2s;
+    transition-delay: 1s;
+    
+}
+
+.hero2{
+    grid-area: hero2;
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem; 
+    margin-bottom: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    width: 85%;
+    height: 85%;
+    padding: 0.5rem;
+    background: radial-gradient( gray, rgb(176, 176, 214));
+    border: 2px white solid;
+    transform: skewY(1deg);
+}
+
+.heroImg{
+    width: 25%;
+   
+}
+.heroInfo{
+    width: 550px;
+    font-size:medium;
+    
+}
+
+.heroInfo h2{
+    font-family:cursive;
+    font-size: 2rem;  
+}
+
+.heroInfo p{
+    width: 524px;
+    margin: 1.7rem;
+}
+
+.cards{
+    grid-area: card1;
+    width: 300px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 1rem 1rem;
+    animation-name: cards_en_movimiento;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: 3;
+    background-color: rgb(216, 137, 137);
+
+}
+.card1{
+    grid-area: card1;
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 3rem ;
+    margin-bottom: 8rem;
+    text-align: center;
+    gap: 0.5rem;
+}
+.card2{
+    grid-area: card2;
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 3rem ;
+    margin-bottom: 8rem;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.card p{
+    margin-top: 1rem;
+    color: blue;
+}
+
+.card img{
+    width: 270px;
+}
+@keyframes cards_en_movimiento{
+    from {background-color: rgb(179, 135, 135);}
+    to {background-color: rgb(126, 126, 77);}
+}
+
+img{
+    transition: height 2s, width 2s;
+}
+img:hover{
+    height: 400px;
+    width: 400px;
+}
+
+.mapa{
+    width: 300px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 1rem 1rem;
+}
+
+#borde{
+    border-style: dotted;
+    border: solid 2px;
+    margin: 2px;
+    padding: 1px;
+    width: 100%;
+   
+}
+.redes{
+    color: rgb(167, 42, 42);
+    text-decoration: none;
+    list-style-type: none;
+    font-family:cursive;
+}
+footer{
+    grid-area: footer;
+}

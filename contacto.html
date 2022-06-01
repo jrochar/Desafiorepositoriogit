@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--nuestras lineas de estilos-->
+    <link rel="stylesheet" href="style.css">
+    <title>Respaso Flexbox</title>
+</head>
+<body class="imgFondo">
+    <div class="container">
+        <header class="header">
+            <img class="headerLogo" src="./img/img.jpg" alt="">
+            <nav>
+               <ul class="headerNav">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="nuestroEquipo.html">Nuestro Equipo</a></li>
+                <li><a href="informacion.html">Información</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+               </ul>
+            </nav>
+        </header>
+    </div>
+    <br>
+    <hr>
+    <article>
+        <section class="colorDatos">
+            <form> <!--Ingresa tus datos-->
+                <h2 id="titulo"><u>Ingresa tus datos</u></h2>
+                <div>
+                    <label for="Nombre">Nombre:</label>
+                    <input type="text" name="nombre" required>
+                     <label for="Apellidos">Apellidos:</label>
+                     <input type="text" name="Apellidos" required>
+                </div>
+                <div>
+                    <label for="Numero Telefono">Numero Telefono:</label>
+                    <input type="text" name="Numero Telefono" required>
+                </div>
+                <div>
+                    <label for="Fecha de Nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" name="Fecha de Nacimiento" id="">
+                <div>
+                    <label for="Correo Electronico">Correo Electronico:</label>
+                    <input type="text" name="Correo Electronico" required>
+                </div>
+                <br>
+                <label for="Metodo de contacto">Metodo de contacto:</label>
+                <select name="Cual es su solicitud">
+                    <option value="opcion1">Correo Electronico</option>
+                    <option value="opcion2">Telefono</option>
+                </select>
+                <br>
+                <br>
+                <label for="Dejanos tus comentarios">Dejanos tus comentarios:</label>
+                <br>
+                <br>
+                <textarea name="texto" cols="50" rows="20"></textarea>
+                <br>
+            <button type="submit">Enviar Informacion</button>
+            <br>
+            <hr>
+        </section>
+    </article>
+    <hr>
+    <footer>
+        <div id="borde">
+            <table>
+                <h5>Redes Sociales</h5>
+                <ul>
+                    <li class="redes"><a href="http://linkedin.com">Linkedin</a> </li>
+                    <li class="redes"><a href="http://twitter.com">Twitter</a> </li>
+                    <li>Ubicación - Stgo, Chile</li>
+                </tr>
+            </table>
+        </div>
+    </footer>
+</body>
+</html>
